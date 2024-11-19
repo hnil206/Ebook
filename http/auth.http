@@ -1,0 +1,35 @@
+### Test POST /auth
+POST http://localhost:5000/api/auth
+Content-Type: application/json
+
+{
+  "provider": "exampleProvider",
+  "providerAccountId": "123456",
+  "name": "John Doe",
+  "email": "john.doe@example.com",
+  "image": "http://example.com/image.jpg",
+  "username": "johndoe"
+}
+
+
+
+### test middleware 
+GET http://localhost:5000/api/auth/
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3MDNmYzZiMzhjMzg0MGI5N2M5ZDI5YiIsInJvbGUiOlsidXNlciIsImFkbWluIl0sImlhdCI6MTcyODQ4Njk5NSwiZXhwIjoxNzI4NDk0MTk1fQ.NZCFLOjBKoSM2n8PGa-EwP2oIGsaQBpBFKCven1GqPs
+
+
+
+
+### test token
+POST http://localhost:5000/api/auth/token
+Content-Type: application/json
+
+{
+  "provider": "google",
+  "providerAccountId": "118303620303769287374"
+}
+
+
+### get user
+GET http://localhost:5000/api/auth/user
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3MTMxZmRlYmM0OWJkYWEzOGMxYzY3ZiIsInJvbGUiOlsidXNlciJdLCJpYXQiOjE3MzE0Mjg3NzcsImV4cCI6MTczMTQzNTk3N30.CXTAhipKj0NXgSzUcRnli5ILHkafySbkmP2bYIzAoW4

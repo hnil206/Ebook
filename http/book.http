@@ -1,0 +1,80 @@
+### Get all books
+GET http://localhost:5000/api/books
+
+### Search books
+GET http://localhost:5000/api/books/search?query=example
+
+### Get a book by ID
+GET http://localhost:5000/api/books/670c963388ce4da4c956dbf7
+
+### Create a new book (Admin-only)
+POST http://localhost:5000/api/books
+Content-Type: application/json
+
+{
+  "title": "New Book",
+  "author": "Author Name",
+  "publishedDate": "2023-01-01",
+  "isbn": "123-4567890123"
+}
+
+############################
+### Thêm sách mới
+POST http://localhost:5000/api/book/
+Content-Type: application/json
+
+{
+      "title": "Tương lai nhân loại",
+      "description": "Khám phá những tiềm năng và thách thức mà loài người sẽ đối mặt trong tương lai.",
+      "cover": "https://res.cloudinary.com/dws8h9utn/image/upload/v1728878128/file_kyi4xd.png",
+      "bookUrl": "https://res.cloudinary.com/dws8h9utn/raw/upload/v1728325552/TuongLaiNhanLoai.epub",
+      "author_name": "John Doe",
+      "author_description": "Một tác giả nổi tiếng về các vấn đề tương lai học.",
+      "category": [
+        {
+          "name": "Khoa học viễn tưởng"
+        },
+        {
+          "name": "Xã hội học"
+        }
+      ]
+    }
+
+### Lấy danh sách sách
+# GET http://localhost:5000/api/book/?authorName=John%20Doe&title=Example&category=Fiction&sortBy=createdAt&sortOrder=asc&skip=0&take=10
+# Accept: application/json
+GET http://localhost:5000/api/book/?authorName=John
+
+
+
+###GET by id
+GET http://localhost:5000/api/book/6713cdf945b388edab3eaa6d
+
+
+####
+GET http://localhost:5000/api/book/category
+
+
+
+#### Rating book
+POST http://localhost:5000/api/book/rating
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3MDdlN2I0MTY5N2YzZTU5M2YyOTYwMCIsInJvbGUiOlsidXNlciJdLCJpYXQiOjE3MzAwMDQ1MzIsImV4cCI6MTczMDAxMTczMn0.p0DSNUMTvb67QlsWWvHPZOYx7ngS-4C2EKuqnUUpJ6k
+Content-Type: application/json
+
+{
+  "bookId": "6713ce1545b388edab3eaa71",
+  "score": 5
+}
+
+
+### Get rating book
+GET http://localhost:5000/api/book/rating/6713cdf945b388edab3eaa6d
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3MDdlN2I0MTY5N2YzZTU5M2YyOTYwMCIsInJvbGUiOlsidXNlciJdLCJpYXQiOjE3MzAwMTI0NDAsImV4cCI6MTczMDAxOTY0MH0.RwK-8Dl7WW4CMeZAEqd2zWglslEqy72OXaJUx_z-xUM
+Content-Type: application/json
+
+
+
+
+### Lấy danh sách sách không có tham số
+GET http://localhost:3000/api/book/
+Accept: application/json

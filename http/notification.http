@@ -1,0 +1,21 @@
+### Create a new notification
+POST http://localhost:5000/notification
+Content-Type: application/json
+
+{
+  "title": "Test Notification",
+  "content": "This is a test notification",
+  "userId": "6703fc6b38c3840b97c9d29b"
+}
+
+### Get notifications for a specific user
+GET http://localhost:5000/notification/6703fc6b38c3840b97c9d29b  // Replace with a valid userId
+
+### Get all notifications
+GET http://localhost:5000/notification
+
+
+
+#### GET by token
+GET http://localhost:5000/api/notification
+Authorization: 

@@ -1,0 +1,21 @@
+### Thêm bình luận
+POST http://localhost:5000/api/comment
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3MDdlN2I0MTY5N2YzZTU5M2YyOTYwMCIsInJvbGUiOlsidXNlciJdLCJpYXQiOjE3MzAwMTI4NzEsImV4cCI6MTczMDAyMDA3MX0.cbFboxXIfkyeedOLyo7kGGBRXirSKpA-5y-Q7LNNo6s
+
+{
+  "objectId": "6713cace03566e13f47d87fa",
+  "content": "Đây là một bình luận mới."
+}
+
+### Thêm phản hồi
+POST http://localhost:5000/api/comment/reply/671e018a0a535dabb5b6cc82
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3MDdlN2I0MTY5N2YzZTU5M2YyOTYwMCIsInJvbGUiOlsidXNlciJdLCJpYXQiOjE3MzAwMTI4NzEsImV4cCI6MTczMDAyMDA3MX0.cbFboxXIfkyeedOLyo7kGGBRXirSKpA-5y-Q7LNNo6s
+
+{
+  "content": "Đây là một phản hồi cho bình luận."
+}
+
+### Lấy bình luận theo ID
+GET http://localhost:5000/api/comment/6713cace03566e13f47d87fa

@@ -1,0 +1,20 @@
+### GET or CREATE a reader
+GET http://localhost:5000/api/reader/6713cdf945b388edab3eaa6d
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3MDdlN2I0MTY5N2YzZTU5M2YyOTYwMCIsInJvbGUiOlsidXNlciJdLCJpYXQiOjE3Mjk0MTU2NjksImV4cCI6MTcyOTQyMjg2OX0.EHVfMoFrSeTyaQsbYZW2e08byiqTyEIjA0S5yOJFMRs
+
+
+### CREATE or UPDATE a reader
+POST http://localhost:5000/api/reader/670c963388ce4da4c956dbf7
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3MDdlN2I0MTY5N2YzZTU5M2YyOTYwMCIsInJvbGUiOlsidXNlciJdLCJpYXQiOjE3Mjg4NzcyNDIsImV4cCI6MTcyODg4NDQ0Mn0.cd_84k_TrW7NbnJ7LWOUrTYrwUW4DUQMW5VydT8HKWA
+Content-Type: application/json
+
+{
+  "currentLocation": {
+    "chapterName": "Introduction",
+    "currentPage": 5,
+    "totalPage": 1,
+    "startCfi": "epubcfi(/6/2[cover]!/6)",
+    "endCfi": "epubcfi(/6/2[cover]!/6)",
+    "base": "epubcfi(/6/2/)"
+  }
+}

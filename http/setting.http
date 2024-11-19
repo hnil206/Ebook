@@ -1,0 +1,29 @@
+### Get user settings
+GET http://localhost:5000/api/ebook/setting
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3MDdlN2I0MTY5N2YzZTU5M2YyOTYwMCIsInJvbGUiOlsidXNlciJdLCJpYXQiOjE3MjkzMDQxOTEsImV4cCI6MTcyOTMxMTM5MX0.4YPXJMnTshnyj5gQsPAGkaVqvYmb2LgJfVmOaJqi7_U
+
+
+### Create or update user settings
+POST http://localhost:5000/api/ebook/setting
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3MTMxZmRlYmM0OWJkYWEzOGMxYzY3ZiIsInJvbGUiOlsidXNlciJdLCJpYXQiOjE3MjkzMDY1OTAsImV4cCI6MTcyOTMxMzc5MH0.ya0K4gnXGxy1nfeLCU4ePPvyjZAeNZ3rO_Bn4ChZlFs
+Content-Type: application/json
+
+{
+  "bookStyle": {
+    "marginVertical": 20,
+    "marginHorizontal": 20,
+    "lineHeight": 1.5,
+    "fontSize": 16,
+    "fontFamily": "Arial"
+  },
+  "bookOption": {
+    "spread": "none",
+    "resizeOnOrientationChange": true,
+    "flow": "paginated"
+  }
+}
+
+
+### GET all
+GET http://localhost:5000/api/ebook/all-setting
+
